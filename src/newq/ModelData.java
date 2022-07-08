@@ -6,7 +6,7 @@ import java.util.List;
 class ModelData extends AbstractTableModel {
     List<Article> data = Warehouse.mergeAll();
 
-    String colNames[] = {"ГРУПА", "НАЗВА", "ОПИС", "ВИРОБНИК", "КІЛЬКІСТЬ", "ЦІНА"};
+    String colNames[] = {"СЕКЦІЯ", "ТОВАР", "ОПИС", "ВИРОБНИК", "КІЛЬКІСТЬ", "ЦІНА"};
     Class<?> colClasses[] = {String.class, String.class, String.class, String.class, Double.class, Double.class};
  
     ModelData() {

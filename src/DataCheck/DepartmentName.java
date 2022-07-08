@@ -2,6 +2,8 @@ package DataCheck;
 
 import DataCheck.Exceptions.InvalidDepartmentNameException;
 
+import javax.swing.*;
+
 
 public class DepartmentName {
     String name;
@@ -11,11 +13,14 @@ public class DepartmentName {
  * @throws InvalidDepartmentNameException
  */
     public DepartmentName(String name) throws InvalidDepartmentNameException {
-        if (name.split(" ")[0].equals("Department")) {
+        if (name.split(" ")[0].equals("Секція")) {
             this.name = name;
             fixString(this.name);
         } else {
-            throw new InvalidDepartmentNameException("The name of a department must begin with \"Department\".\n" +
+            JOptionPane.showInternalMessageDialog(null, "The name of a department must begin with \\\"Секція\\\".\\n\" +\n" +
+                            "                    name + \" is not valid.", "Error",
+                    JOptionPane.ERROR_MESSAGE);
+            throw new InvalidDepartmentNameException("The name of a department must begin with \"Секція\".\n" +
                     name + " is not valid.");
         }
     }
@@ -36,7 +41,7 @@ public class DepartmentName {
 
     @Override
     public String toString() {
-        return "DepartmentName{" +
+        return "Секція{" +
                 "name='" + name + " of "+ '\'' +
                 '}';
     }

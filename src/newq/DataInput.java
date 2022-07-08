@@ -3,11 +3,7 @@ package newq;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-/*
- * Author: (Heorhii Sanchenko) Not quite
- * File: DataInput.java
- * Task: Student class
- */
+
 public final class DataInput {
     public static Long getLong() throws IOException {
         String s = getString();
