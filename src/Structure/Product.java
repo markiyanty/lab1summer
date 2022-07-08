@@ -1,4 +1,8 @@
-public abstract class Product {
+package Structure;
+
+import Structure.Department;
+
+public class Product {
     private String name,description,producer;
     private Department department;
     private int amountAvailable;
@@ -72,7 +76,7 @@ public abstract class Product {
 
 
     public String toString() {
-        return "Product: " + name + "\ndescription: " + description + "\nproducer: " + producer +
+        return "Structure.Product: " + name + "\ndescription: " + description + "\nproducer: " + producer +
                 "\ndepartment: " + department + "\namount on storage: " + amountAvailable
                 + "\nprice per unit: " + pricePerUnit;
     }

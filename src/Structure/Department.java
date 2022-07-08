@@ -1,16 +1,21 @@
+package Structure;
+
+import Departments.MeatDepartment;
+
 import java.util.ArrayList;
 
-public abstract class Department {
+public class Department {
+    //variables
     private String name;
-    int amountOfProducts, valueOfDepartment ;
-    ArrayList<Product> products;
 
 
-
+    //constructor
     public Department(String name) {
         this.name = name;
     }
 
+
+    //getters and setters
     public String name() {
         return name;
     }
@@ -18,4 +23,10 @@ public abstract class Department {
     public void setName(String name) {
         this.name = name;
     }
+
+
+    //methods
+
+
+
 }

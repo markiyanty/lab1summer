@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91f18607-88c2-4130-9754-a18bce9af774" name="Changes" comment="Create repository">
-      <change afterPath="$PROJECT_DIR$/src/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
+    <list default="true" id="91f18607-88c2-4130-9754-a18bce9af774" name="Changes" comment="adding tow abstract classes: Department and Product">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataCheck/DataInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataCheck/DepartmentName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataCheck/Exceptions/InvalidDepartmentDataFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataCheck/Exceptions/InvalidDepartmentNameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Structure/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Structure/Shop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Department.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Structure/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +44,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/markiyantyndyk/Documents/MOHYLA/Programming/lab2summer/src/DataCheck/Exceptions",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,6 +57,12 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/DataCheck/Exceptions" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="DataCheck" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -57,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657265323810</updated>
-      <workItem from="1657265325256" duration="3515000" />
+      <workItem from="1657265325256" duration="10696000" />
     </task>
     <task id="LOCAL-00001" summary="Create repository">
       <created>1657265782920</created>
@@ -66,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657265782920</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="adding tow abstract classes: Department and Product">
+      <created>1657270325620</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657270325620</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +107,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create repository" />
+    <MESSAGE value="adding tow abstract classes: Department and Product" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding tow abstract classes: Department and Product" />
   </component>
 </project>
