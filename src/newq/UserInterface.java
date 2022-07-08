@@ -418,6 +418,107 @@ public class UserInterface extends JFrame {
 			}
 
 		});
+		JButton deliveryArticle = new JButton("DELIVERY");
+		deliveryArticle.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				String artName = "";
+				Group g;
+				Article a;
+				int currentAmount = 0;
+
+				artName = JOptionPane.showInputDialog("Enter the name of article that was delivered: ");
+				if (artName == null) {
+					JOptionPane.showInternalMessageDialog(null, "No article entered", "Error: no input",
+							JOptionPane.ERROR_MESSAGE);
+					return;
+				}
+				g = warehouse.getGroupByArticle(artName);
+				if (g == null) {
+					JOptionPane.showInternalMessageDialog(null, "The article does not exist!",
+							"Error: non existing article", JOptionPane.ERROR_MESSAGE);
+					return;
+				}
+				else {
+					Article art =g.getArticle(artName);
+					currentAmount = art.getAmount();
+					String amount = JOptionPane.showInputDialog("Delivered amount:");
+					if(amount != null && !amount.isEmpty()){
+
+						while (!isNumber(amount)){
+							JOptionPane.showInternalMessageDialog(null, "You can enter only positive numbers!",
+									"Error: not a number", JOptionPane.ERROR_MESSAGE);
+							String amount1 = JOptionPane.showInputDialog("Delivered amount:");
+							amount = String.valueOf(Integer.parseInt(amount1) + currentAmount);
+						}
+						if(isNumber(amount)) {
+							int b = Integer.parseInt(amount);
+							art.setAmount(Integer.parseInt(amount)+currentAmount) ;
+						}
+
+					}
+					table.setModel(new ModelData());
+					JOptionPane.showInternalMessageDialog(null, "Delivery was accepted.");
+					return;
+					//}
+				}
+
+			}
+
+		});
+		JButton soldArticle = new JButton("SELL");
+		soldArticle.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				String artName = "";
+				Group g;
+				Article a;
+				int currentAmount = 0;
+
+				artName = JOptionPane.showInputDialog("Enter the name of article you sold: ");
+				if (artName == null) {
+					JOptionPane.showInternalMessageDialog(null, "No article entered", "Error: no input",
+							JOptionPane.ERROR_MESSAGE);
+					return;
+				}
+				g = warehouse.getGroupByArticle(artName);
+				if (g == null) {
+					JOptionPane.showInternalMessageDialog(null, "The article does not exist!",
+							"Error: non existing article", JOptionPane.ERROR_MESSAGE);
+					return;
+				}
+				else {
+					Article art =g.getArticle(artName);
+					currentAmount = art.getAmount();
+					String amount = JOptionPane.showInputDialog("Sold amount:");
+					if(amount != null && !amount.isEmpty()){
+
+						while (!isNumber(amount)){
+							JOptionPane.showInternalMessageDialog(null, "You can enter only positive numbers!",
+									"Error: not a number", JOptionPane.ERROR_MESSAGE);
+							String amount1 = JOptionPane.showInputDialog("Sold amount:");
+							amount = String.valueOf(currentAmount - Integer.parseInt(amount1));
+						}
+						if(isNumber(amount)) {
+							int b = Integer.parseInt(amount);
+							art.setAmount(currentAmount-Integer.parseInt(amount));
+						}
+
+					}
+					table.setModel(new ModelData());
+					JOptionPane.showInternalMessageDialog(null, "Product was sold.");
+					return;
+					//}
+				}
+
+			}
+
+		});
+
 
 
 		f.add(scrollPane);
@@ -427,6 +528,8 @@ public class UserInterface extends JFrame {
 		f.add(addGroup);
 		f.add(editGroup);
 		f.add(deleteGroup);
+		f.add(deliveryArticle);
+		f.add(soldArticle);
 
 
 
