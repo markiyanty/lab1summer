@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91f18607-88c2-4130-9754-a18bce9af774" name="Changes" comment="new logic&#10;file shop: added two  new arraylists, departments initialization">
+    <list default="true" id="91f18607-88c2-4130-9754-a18bce9af774" name="Changes" comment="sellind and delivery option was added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/newq/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/UserInterface.java" afterDir="false" />
     </list>
@@ -85,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657265323810</updated>
-      <workItem from="1657265325256" duration="16370000" />
+      <workItem from="1657265325256" duration="19248000" />
     </task>
     <task id="LOCAL-00001" summary="Create repository">
       <created>1657265782920</created>
@@ -115,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657295975610</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="sellind and delivery option was added">
+      <created>1657308492689</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657308492689</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +143,7 @@
     <MESSAGE value="Create repository" />
     <MESSAGE value="adding tow abstract classes: Department and Product" />
     <MESSAGE value="new logic&#10;file shop: added two  new arraylists, departments initialization" />
-    <option name="LAST_COMMIT_MESSAGE" value="new logic&#10;file shop: added two  new arraylists, departments initialization" />
+    <MESSAGE value="sellind and delivery option was added" />
+    <option name="LAST_COMMIT_MESSAGE" value="sellind and delivery option was added" />
   </component>
 </project>
