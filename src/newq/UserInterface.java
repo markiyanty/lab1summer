@@ -205,8 +205,8 @@ public class UserInterface extends JFrame {
                     String artName1 = JOptionPane.showInputDialog("Enter the name of article you want to add: ");
                     artName = artName1;
                 }
-                g = warehouse.getGroupByArticle(artName);
-                if (g == null) {
+
+             {
                     // adding article
                     String g_name = JOptionPane.showInputDialog("Group:");
                     // ПЕРЕВІРКА НА ІСНУВАННЯ ГРУПИ if (groupName)
@@ -240,14 +240,25 @@ public class UserInterface extends JFrame {
                                     }
                                     if (isNumber(price)) {
                                         double p = Double.parseDouble(price);
-                                        warehouse.addArticle(group, artName, info, producer, b, p);
-                                        table.setModel(new ModelData());
-                                        JOptionPane.showInternalMessageDialog(null, "The article was added.");
-                                        return;
+                                        Article exArt = warehouse.getArticle(artName);
+                                        Article newArt = new Article( artName, info, producer, b, p);
+                                        if(newArt.getDescription().equals(exArt.getDescription()) && newArt.getProducer().equals( exArt.getProducer()) && newArt.getName().equals(exArt.getName())){
+                                            JOptionPane.showInternalMessageDialog(null, "The article already exists!",
+                                                    "Error: existing article", JOptionPane.ERROR_MESSAGE);
+                                            return;
+                                        }
+                                        else {
+                                            warehouse.addArticle(group, artName, info, producer, b, p);
+                                            table.setModel(new ModelData());
+                                            JOptionPane.showInternalMessageDialog(null, "The article was added.");
+                                            return;
+
+                                        }
 
                                     }
 
                                 } else {
+
                                     warehouse.addArticle(group, artName, info, producer, b, 0.0);
                                     table.setModel(new ModelData());
                                     JOptionPane.showInternalMessageDialog(null, "The article was added.");
@@ -257,10 +268,6 @@ public class UserInterface extends JFrame {
                             }
                         }
                     }
-                } else {
-                    JOptionPane.showInternalMessageDialog(null, "The article already exists!",
-                            "Error: existing article", JOptionPane.ERROR_MESSAGE);
-                    return;
                 }
             }
 
@@ -536,6 +543,8 @@ public class UserInterface extends JFrame {
 				String totalValue = "\nTotal value of articles: " + totalGroupsValue;
 				System.out.println(totalAmount);
 				System.out.println(totalValue);
+                JOptionPane.showInternalMessageDialog(null, "\nTotal amount of articles: " + totalArtAmount + "\nTotal value of articles: " + totalGroupsValue  );
+                return;
             }
 
         });
@@ -561,8 +570,43 @@ public class UserInterface extends JFrame {
 
                 }
 				System.out.println(groupsStatistics.stream().toList());
+                JOptionPane.showInternalMessageDialog(null, "Statistics: " + groupsStatistics.stream().toList() );
+                return;
             }
 
+        });
+
+        JButton searchArticle = new JButton("FIND ARTICLE");
+        searchArticle.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                String artName = "";
+                Group g;
+                Article a;
+                String output = "";
+
+                artName = JOptionPane.showInputDialog("Enter the name of article you want to find: ");
+                if (artName == null) {
+                    JOptionPane.showInternalMessageDialog(null, "No article entered", "Error: no input",
+                            JOptionPane.ERROR_MESSAGE);
+                    return;
+                } else {
+                    a = warehouse.getArticle(artName);
+                    if (a == null) {
+                        JOptionPane.showInternalMessageDialog(null, "There is no such article found!",
+                                "Error: no article found", JOptionPane.ERROR_MESSAGE);
+                        return;
+                    } else {
+                        output = warehouse.getArticleNames(a.getName());
+//                        warehouse.deleteArticle(artName);
+//                        table.setModel(new ModelData());
+                        JOptionPane.showInternalMessageDialog(null, "The \n" + output + "was found.");
+                        return;
+                    }
+                }
+            }
         });
 
 
@@ -577,7 +621,7 @@ public class UserInterface extends JFrame {
         f.add(soldArticle);
         f.add(showGeneralStatistics);
 		f.add(showStatisticsByGroups);
-
+f.add(searchArticle);
 
         f.setVisible(true);
     }

@@ -17,8 +17,7 @@ public class DepartmentName {
             this.name = name;
             fixString(this.name);
         } else {
-            JOptionPane.showInternalMessageDialog(null, "The name of a department must begin with \\\"Секція\\\".\\n\" +\n" +
-                            "                    name + \" is not valid.", "Error",
+            JOptionPane.showInternalMessageDialog(null, "The name of a department must begin with \"Секція\".", "Error",
                     JOptionPane.ERROR_MESSAGE);
             throw new InvalidDepartmentNameException("The name of a department must begin with \"Секція\".\n" +
                     name + " is not valid.");

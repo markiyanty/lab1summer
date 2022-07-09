@@ -164,7 +164,7 @@ public class Warehouse {
 	 * Gets article names
 	 * @return String
 	 */
-	public String getArticleNames() {
+	public String getArticleNames(String name) {
 		String s = "";
 		if(groups == null) {
 			return "There are no articles in this warehouse";
@@ -175,7 +175,10 @@ public class Warehouse {
 				continue;
 			}
 			for (Article a : g.getArticles()) {
-				s += a.getName() + "\n";
+				if(a.getName().equals(name)) {
+					s += a.getName() + " " + a.getDescription()+" "+ a.getAmount() + "\n";
+
+				}
 			}
 		}
 		return s;
