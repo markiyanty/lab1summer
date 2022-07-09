@@ -1,0 +1,136 @@
+[
+  {
+    "id": "56173d08-90e7-4551-ad32-31c0b647711a",
+    "name": "Секція Фруктів",
+    "description": "Фрукти з усььго світу",
+    "articles": [
+      {
+        "id": "2fcb1805-6db5-43f6-bb3c-9781736639a3",
+        "name": "Яблука",
+        "description": "Семеренко",
+        "producer": "Україна",
+        "amount": 800,
+        "price": 20,
+        "groupId": "56173d08-90e7-4551-ad32-31c0b647711a"
+      },
+      {
+        "id": "325015f0-63ce-4336-bbde-9b8ef6b7675e",
+        "name": "Банан",
+        "description": "Жовті",
+        "producer": "Африка",
+        "amount": 300,
+        "price": 29,
+        "groupId": "56173d08-90e7-4551-ad32-31c0b647711a"
+      },
+      {
+        "id": "e43d1478-07cd-43e4-b655-a975add6f6f5",
+        "name": "Апельсин",
+        "description": "Кнопочки",
+        "producer": "Бразилія",
+        "amount": 450,
+        "price": 29,
+        "groupId": "56173d08-90e7-4551-ad32-31c0b647711a"
+      }
+    ]
+  },
+  {
+    "id": "00a831c7-b15a-4ddd-ab4f-2dc4bd96cbde",
+    "name": "Секція Ягід",
+    "description": "Польські трускавки",
+    "articles": [
+      {
+        "id": "fcec3d45-1836-4a52-ba55-3cb4863b9d1c",
+        "name": "Черешня",
+        "description": "Солодка",
+        "producer": "Україна",
+        "amount": 150,
+        "price": 45,
+        "groupId": "00a831c7-b15a-4ddd-ab4f-2dc4bd96cbde"
+      },
+      {
+        "id": "21d2b01c-45ca-4635-8df5-1a5ec1e86553",
+        "name": "Полуниця",
+        "description": "Солона",
+        "producer": "Польща",
+        "amount": 200,
+        "price": 60,
+        "groupId": "00a831c7-b15a-4ddd-ab4f-2dc4bd96cbde"
+      }
+    ]
+  },
+  {
+    "id": "7bd202ea-cd6f-4d79-9600-bf4879b1c02d",
+    "name": "Секція Овочів",
+    "description": "Кабачки і баклажани",
+    "articles": [
+      {
+        "id": "82596a37-f550-4de1-bf68-afc890a4e34e",
+        "name": "Помідор",
+        "description": "Рожевий",
+        "producer": "Україна",
+        "amount": 600,
+        "price": 34,
+        "groupId": "7bd202ea-cd6f-4d79-9600-bf4879b1c02d"
+      },
+      {
+        "id": "63ea967e-42d9-43ab-a05f-55f507574baa",
+        "name": "Картопля",
+        "description": "Жовта",
+        "producer": "Україна",
+        "amount": 800,
+        "price": 17,
+        "groupId": "7bd202ea-cd6f-4d79-9600-bf4879b1c02d"
+      }
+    ]
+  },
+  {
+    "id": "37f74ccd-9703-419d-84aa-cf2ddde8881e",
+    "name": "Секція Молочки",
+    "description": "Корова знесла яйце",
+    "articles": [
+      {
+        "id": "16845bfd-bdfc-46bb-9ef5-5bd7582593a9",
+        "name": "Молоко",
+        "description": "2,5%",
+        "producer": "Україна",
+        "amount": 800,
+        "price": 30,
+        "groupId": "37f74ccd-9703-419d-84aa-cf2ddde8881e"
+      },
+      {
+        "id": "183b506f-3f44-4836-86ae-02ae1bcd077d",
+        "name": "Пармезан",
+        "description": "Італія",
+        "producer": "Україна",
+        "amount": 130,
+        "price": 230,
+        "groupId": "37f74ccd-9703-419d-84aa-cf2ddde8881e"
+      }
+    ]
+  },
+  {
+    "id": "0aaafc8a-1ab8-446b-929b-26c660276f1f",
+    "name": "Секція Солодощів",
+    "description": "Випічка і печенька",
+    "articles": [
+      {
+        "id": "3b503a49-d58a-48b4-914d-08c8ef3643b3",
+        "name": "Шоколад",
+        "description": "Рошен",
+        "producer": "Україна",
+        "amount": 800,
+        "price": 25,
+        "groupId": "0aaafc8a-1ab8-446b-929b-26c660276f1f"
+      },
+      {
+        "id": "72a31fef-c6bd-4dc1-bc16-fa248c76d344",
+        "name": "Печиво",
+        "description": "Езмеральда",
+        "producer": "Україна",
+        "amount": 500,
+        "price": 27,
+        "groupId": "0aaafc8a-1ab8-446b-929b-26c660276f1f"
+      }
+    ]
+  }
+]

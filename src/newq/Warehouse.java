@@ -1,10 +1,13 @@
 package newq;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class Warehouse {
-	private static ArrayList<Group> groups;
+public class Warehouse{
+	private static ArrayList<Group> groups = new ArrayList<>();
 
 	/**
 	 * Adds group to ArrayList
@@ -20,6 +23,11 @@ public class Warehouse {
 			groups.add(new Group(name, description, articles));
 		}
 	}
+
+	public void addGroup(Group group) {
+		groups.add(group);
+	}
+
 	public static ArrayList<Group> allGroups(){
 		return  groups;
 	}
@@ -215,6 +223,5 @@ public class Warehouse {
 		}
 		return s;
 	}
-
 }
 

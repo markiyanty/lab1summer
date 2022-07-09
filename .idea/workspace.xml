@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91f18607-88c2-4130-9754-a18bce9af774" name="Changes" comment="sellind and delivery option was added">
+    <list default="true" id="91f18607-88c2-4130-9754-a18bce9af774" name="Changes" comment="adding tow abstract classes: Department and Product">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/json_20220320.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_backup.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json-20220320.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/newq/JSONImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/newq/data_saver/DataReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/newq/data_saver/DataWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/newq/data_saver/JSONData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataCheck/DepartmentName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataCheck/DepartmentName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab2Summer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2Summer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Tester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/newq/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/UserInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/newq/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Warehouse.java" afterDir="false" />
     </list>
@@ -19,6 +30,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -40,11 +52,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/markiyantyndyk/Documents/MOHYLA/Programming/lab2summer/src/newq",
+    "last_opened_file_path": "C:/Users/User/Desktop/lab2summer",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -52,6 +67,7 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\lab2summer" />
       <recent name="$PROJECT_DIR$/src/newq" />
       <recent name="$PROJECT_DIR$/src/DataCheck/Exceptions" />
     </key>
@@ -88,6 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657265323810</updated>
       <workItem from="1657265325256" duration="26735000" />
+      <workItem from="1657371069619" duration="7637000" />
     </task>
     <task id="LOCAL-00001" summary="Create repository">
       <created>1657265782920</created>

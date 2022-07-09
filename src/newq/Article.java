@@ -1,142 +1,168 @@
 package newq;
 
+import org.json.JSONObject;
+
+import java.util.UUID;
+
 /*
  * Author: Heorhii Sanchenko and Zahryvyi Oleh
  * File: Article.java
  * Task: 3rd depth part, Article
  */
-public class Article {
+public class Article implements JSONImage{
+    private String name;
+    private String description;
+    private String producer;
+    private int amount;
+    private double price;
+    private String group;
+    private String id;
 
+    public Article(String name, String description, String producer, int amount, double price, String ID) {
+        this(name, description, producer, amount, price);
+		this.id = ID;
+    }
 
-	private String name;
-	private String description; 
-	private String producer;
-	private int amount;
-	private double price;
-	private String group;
-
-	Article(String name, String description) {
-		this.name = name;
-		this.description = description;
-	}
-
-	Article( String name, String description, String producer, int amount, double price) {
-
-		this.name = name;
-		this.description = description;
-		this.producer = producer;
-		this.amount = amount;
-		this.price = price;
-		if(name == null || name.isEmpty()) {
-        	this.name = "Unknown";
+    Article(String name, String description, String producer, int amount, double price) {
+        this.name = name;
+        this.description = description;
+        this.producer = producer;
+        this.amount = amount;
+        this.price = price;
+        this.id = UUID.randomUUID().toString();
+        if (name == null || name.isEmpty()) {
+            this.name = "Unknown";
         }
-        if(description == null ||description.isEmpty()) {
-        	this.description = "Unknown";
+        if (description == null || description.isEmpty()) {
+            this.description = "Unknown";
         }
-        if(producer == null || producer.isEmpty()) {
-        	this.producer = "Unknown";
+        if (producer == null || producer.isEmpty()) {
+            this.producer = "Unknown";
         }
-	}
+    }
 
-	Article(String name, String description, int amount, double price) {
-		this.name = name;
-		this.description = description;
-		this.amount = amount;
-		this.price = price;
-		this.producer = "Unknown";
-	}
+    Article(String name, String description, int amount, double price) {
+        this.name = name;
+        this.description = description;
+        this.amount = amount;
+        this.price = price;
+        this.producer = "Unknown";
+    }
 
-	/**
-	 * Gets price
-	 * @return double
-	 */
-	public double getPrice() {
-		return price;
-	}
+    /**
+     * Gets price
+     *
+     * @return double
+     */
+    public double getPrice() {
+        return price;
+    }
 
-	/**
-	 * Gets amount
-	 * @return int
-	 */
-	public int getAmount() {
-		return amount;
-	}
+    /**
+     * Sets price
+     *
+     * @param price
+     */
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
-	/**
-	 * Gets description
-	 * @return String
-	 */
-	public String getDescription() {
-		return description;
-	}
+    /**
+     * Gets amount
+     *
+     * @return int
+     */
+    public int getAmount() {
+        return amount;
+    }
 
-	/**
-	 * Gets name
-	 * @return String
-	 */
-	public String getName() {
-		return name;
-	}
+    /**
+     * Sets amount
+     *
+     * @param amount
+     */
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
 
-	/**
-	 * Gets producer
-	 * @return String
-	 */
-	public String getProducer() {
-		return producer;
-	}
+    /**
+     * Gets description
+     *
+     * @return String
+     */
+    public String getDescription() {
+        return description;
+    }
 
-	public void setGroup(String group){
-		this.group=group;
-	}
+    /**
+     * Sets description
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public String getGroup() {
-		return group;
-	}
+    /**
+     * Gets name
+     *
+     * @return String
+     */
+    public String getName() {
+        return name;
+    }
 
-	/**
-	 * Sets amount
-	 * @param amount
-	 */
-	public void setAmount(int amount) {
-		this.amount = amount;
-	}
+    /**
+     * Sets name
+     *
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	/**
-	 * Sets description
-	 * @param description
-	 */
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    /**
+     * Gets producer
+     *
+     * @return String
+     */
+    public String getProducer() {
+        return producer;
+    }
 
-	/**
-	 * Sets name
-	 * @param name
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
+    /**
+     * Sets producer
+     *
+     * @param producer
+     */
+    public void setProducer(String producer) {
+        this.producer = producer;
+    }
 
-	/**
-	 * Sets price
-	 * @param price
-	 */
-	public void setPrice(double price) {
-		this.price = price;
-	}
+    public String getGroup() {
+        return group;
+    }
 
-	/**
-	 * Sets producer
-	 * @param producer
-	 */
-	public void setProducer(String producer) {
-		this.producer = producer;
-	}
+    public void setGroup(String group) {
+        this.group = group;
+    }
 
-	@Override
-	public String toString() {
-		return name + ", description '" + description + '\'' + ", producer '" + producer + '\'' + ", amount = " + amount
-				+ ", price = " + price;
-	}
+    @Override
+    public String toString() {
+        return name + ", description '" + description + '\'' + ", producer '" + producer + '\'' + ", amount = " + amount + ", price = " + price;
+    }
+
+    @Override
+    public JSONObject toJSON() {
+        JSONObject result = new JSONObject();
+
+        result.put("name", name);
+        result.put("description", description);
+        result.put("producer", producer);
+        result.put("amount", amount);
+        result.put("price", price);
+        result.put("id", id);
+
+        return result;
+    }
 }
