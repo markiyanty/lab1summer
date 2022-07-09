@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91f18607-88c2-4130-9754-a18bce9af774" name="Changes" comment="adding tow abstract classes: Department and Product">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataCheck/DataInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataCheck/DepartmentName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataCheck/Exceptions/InvalidDepartmentDataFormat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataCheck/Exceptions/InvalidDepartmentNameException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Structure/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Structure/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Department.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Structure/Product.java" afterDir="false" />
-    </list>
+    <list default="true" id="91f18607-88c2-4130-9754-a18bce9af774" name="Changes" comment="adding tow abstract classes: Department and Product" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +35,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/markiyantyndyk/Documents/MOHYLA/Programming/lab2summer/src/DataCheck/Exceptions",
+    "last_opened_file_path": "C:/Users/User/Desktop/lab2summer",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,6 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657265323810</updated>
       <workItem from="1657265325256" duration="10696000" />
+      <workItem from="1657295730183" duration="1190000" />
     </task>
     <task id="LOCAL-00001" summary="Create repository">
       <created>1657265782920</created>
