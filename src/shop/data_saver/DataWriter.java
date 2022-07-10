@@ -1,7 +1,7 @@
-package newq.data_saver;
+package shop.data_saver;
 
-import newq.Group;
-import newq.Warehouse;
+import shop.entities.Group;
+import shop.entities.Warehouse;
 import org.json.JSONArray;
 
 import java.io.FileWriter;

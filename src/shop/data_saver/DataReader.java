@@ -1,8 +1,8 @@
-package newq.data_saver;
+package shop.data_saver;
 
-import newq.Article;
-import newq.Group;
-import newq.Warehouse;
+import shop.entities.Article;
+import shop.entities.Group;
+import shop.entities.Warehouse;
 import org.json.JSONArray;
 import org.json.JSONObject;
 

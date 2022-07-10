@@ -5,11 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91f18607-88c2-4130-9754-a18bce9af774" name="Changes" comment="search added, check for unique articles, improved stats,checker for group, new logic of adding article">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shop/UserInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shop/select/IOptionConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shop/select/Option.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shop/select/SelectOptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shop/validator/DoubleValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shop/validator/IntValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shop/validator/StringValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shop/validator/ValidationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shop/validator/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/newq/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/newq/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/newq/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataCheck/DataInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataCheck/DepartmentName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataCheck/Exceptions/InvalidDepartmentDataFormat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataCheck/Exceptions/InvalidDepartmentNameException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop/entities/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/DataInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop/DataInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop/entities/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/JSONImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop/data_saver/JSONImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/ModelData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop/table/ModelData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/ModelGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop/table/ModelGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/UserInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop/entities/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/data_saver/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop/data_saver/DataReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/data_saver/DataWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop/data_saver/DataWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/data_saver/JSONData.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +43,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -35,19 +60,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/markiyantyndyk/Documents/MOHYLA/Programming/lab2summer/src/newq&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/markiyantyndyk/Documents/MOHYLA/Programming/lab2summer/src/newq",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -62,11 +88,11 @@
   </component>
   <component name="RunManager">
     <configuration name="Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="newq.Tester" />
+      <option name="MAIN_CLASS_NAME" value="Tester" />
       <module name="Lab2Summer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="newq.*" />
+          <option name="PATTERN" value="newq.components.select.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -76,7 +102,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Tester" />
+        <item itemvalue="Application.shop.Tester" />
       </list>
     </recent_temporary>
   </component>
@@ -188,5 +214,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
