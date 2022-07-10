@@ -81,11 +81,11 @@ public class Warehouse {
      * @param name
      * @param description
      */
-    public void addGroup(String name, String description) {
-        if (groups == null)
-            groups = new ArrayList<>();
-        groups.add(new Group(name, description));
-    }
+//    public void addGroup(String name, String description, ArrayList<Article> articles, String ID) {
+//        if (groups == null)
+//            groups = new ArrayList<>();
+//        groups.add(new Group(name, description, articles, ID));
+//    }
 
     /**
      * Removes group from ArrayList

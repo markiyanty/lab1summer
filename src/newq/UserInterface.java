@@ -378,9 +378,9 @@ public class UserInterface extends JFrame {
                 } else {
                     group_desc = JOptionPane.showInputDialog("Enter the description of group you want to add: ");
                     if (group_desc != null && !group_desc.isEmpty()) {
-                        warehouse.addGroup(groupName.getName(), group_desc);
+                        warehouse.addGroup(new Group(name, group_desc));
                     } else
-                        warehouse.addGroup(groupName.getName(), "Unknown");
+                        warehouse.addGroup(new Group(name,group_desc));
 
                     table.setModel(new ModelData());
                     tableOfGroups.setModel(new ModelGroup());

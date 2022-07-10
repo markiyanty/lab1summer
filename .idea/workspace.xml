@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91f18607-88c2-4130-9754-a18bce9af774" name="Changes" comment="search added, check for unique articles, improved stats,checker for group, new logic of adding article">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataCheck/DataInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataCheck/DataInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataCheck/DepartmentName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataCheck/DepartmentName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataCheck/Exceptions/InvalidDepartmentDataFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataCheck/Exceptions/InvalidDepartmentDataFormat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/newq/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Article.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/newq/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/newq/ModelData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/ModelData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/newq/ModelGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/ModelGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/newq/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Tester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/newq/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/UserInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/newq/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Warehouse.java" afterDir="false" />
     </list>
@@ -98,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657265323810</updated>
       <workItem from="1657265325256" duration="27993000" />
-      <workItem from="1657392579479" duration="3978000" />
+      <workItem from="1657392579479" duration="6485000" />
     </task>
     <task id="LOCAL-00001" summary="Create repository">
       <created>1657265782920</created>
@@ -156,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657344570714</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="search added, check for unique articles, improved stats,checker for group, new logic of adding article">
+      <created>1657440571799</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1657440571799</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,5 +178,15 @@
     <MESSAGE value="sellind and delivery option was added" />
     <MESSAGE value="search added, check for unique articles, improved stats,checker for group, new logic of adding article" />
     <option name="LAST_COMMIT_MESSAGE" value="search added, check for unique articles, improved stats,checker for group, new logic of adding article" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.json.JSONException" package="org.json" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -39,13 +39,18 @@ public class Group implements JSONImage {
     public Group(String name, String description) {
         this.name = name;
         this.description = description;
-        if (name == null) {
-            this.name = "Unknown";
-        }
-        if (description == null) {
-            this.description = "Unknown";
-        }
+        this.id = UUID.randomUUID().toString();
     }
+    //      public Group(String name, String description) {
+//        this.name = name;
+//        this.description = description;
+//        if (name == null) {
+//            this.name = "Unknown";
+//        }
+//        if (description == null) {
+//            this.description = "Unknown";
+//        }
+//    }
 
     /**
      * Adds article to arraylist
