@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91f18607-88c2-4130-9754-a18bce9af774" name="Changes" comment="adding tow abstract classes: Department and Product">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/json_20220320.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_backup.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json-20220320.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/newq/JSONImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/newq/data_saver/DataReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/newq/data_saver/DataWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/newq/data_saver/JSONData.java" afterDir="false" />
+    <list default="true" id="91f18607-88c2-4130-9754-a18bce9af774" name="Changes" comment="search added, check for unique articles, improved stats,checker for group, new logic of adding article">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2Summer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2Summer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataCheck/DataInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataCheck/DataInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataCheck/DepartmentName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataCheck/DepartmentName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataCheck/Exceptions/InvalidDepartmentDataFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataCheck/Exceptions/InvalidDepartmentDataFormat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/newq/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Article.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/newq/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/ModelData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/ModelData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newq/ModelGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/ModelGroup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/newq/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Tester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/newq/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/UserInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/newq/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Warehouse.java" afterDir="false" />
@@ -30,7 +29,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -46,28 +44,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/User/Desktop/lab2summer",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/markiyantyndyk/Documents/MOHYLA/Programming/lab2summer/src/newq&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\lab2summer" />
       <recent name="$PROJECT_DIR$/src/newq" />
       <recent name="$PROJECT_DIR$/src/DataCheck/Exceptions" />
     </key>
@@ -103,8 +97,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657265323810</updated>
-      <workItem from="1657265325256" duration="26735000" />
-      <workItem from="1657371069619" duration="7637000" />
+      <workItem from="1657265325256" duration="27993000" />
+      <workItem from="1657392579479" duration="3978000" />
     </task>
     <task id="LOCAL-00001" summary="Create repository">
       <created>1657265782920</created>
@@ -155,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657314378494</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="search added, check for unique articles, improved stats,checker for group, new logic of adding article">
+      <created>1657344570714</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657344570714</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +178,7 @@
     <MESSAGE value="adding tow abstract classes: Department and Product" />
     <MESSAGE value="new logic&#10;file shop: added two  new arraylists, departments initialization" />
     <MESSAGE value="sellind and delivery option was added" />
-    <option name="LAST_COMMIT_MESSAGE" value="sellind and delivery option was added" />
+    <MESSAGE value="search added, check for unique articles, improved stats,checker for group, new logic of adding article" />
+    <option name="LAST_COMMIT_MESSAGE" value="search added, check for unique articles, improved stats,checker for group, new logic of adding article" />
   </component>
 </project>

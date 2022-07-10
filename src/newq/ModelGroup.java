@@ -6,10 +6,10 @@ import java.util.List;
 class ModelGroup extends AbstractTableModel {
     List<Group> data = Warehouse.allGroups();
 
-    String colNames[] = {"НАЗВА ГРУПИ",  "ОПИС"};
+    String colNames[] = {"НАЗВА ГРУПИ", "ОПИС"};
     Class<?> colClasses[] = {String.class, String.class};
 
-    ModelGroup() { 
+    ModelGroup() {
         super();
 
     }

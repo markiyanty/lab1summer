@@ -11,10 +11,10 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.UUID;
 
-public class Group implements JSONImage{
+public class Group implements JSONImage {
     private String name;
     private String description;
-    private ArrayList<Article> articles;
+    private ArrayList<Article> articles = new ArrayList<>();
     private String id;
 
     public Group(String name, String description, ArrayList<Article> articles) {

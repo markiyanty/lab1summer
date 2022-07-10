@@ -9,7 +9,7 @@ import java.util.UUID;
  * File: Article.java
  * Task: 3rd depth part, Article
  */
-public class Article implements JSONImage{
+public class Article implements JSONImage {
     private String name;
     private String description;
     private String producer;
@@ -20,7 +20,7 @@ public class Article implements JSONImage{
 
     public Article(String name, String description, String producer, int amount, double price, String ID) {
         this(name, description, producer, amount, price);
-		this.id = ID;
+        this.id = ID;
     }
 
     Article(String name, String description, String producer, int amount, double price) {
