@@ -11,10 +11,10 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.UUID;
 
-public class Group implements JSONImage{
+public class Group implements JSONImage {
     private String name;
     private String description;
-    private ArrayList<Article> articles;
+    private ArrayList<Article> articles = new ArrayList<>();
     private String id;
 
     public Group(String name, String description, ArrayList<Article> articles) {
@@ -39,13 +39,18 @@ public class Group implements JSONImage{
     public Group(String name, String description) {
         this.name = name;
         this.description = description;
-        if (name == null) {
-            this.name = "Unknown";
-        }
-        if (description == null) {
-            this.description = "Unknown";
-        }
+        this.id = UUID.randomUUID().toString();
     }
+    //      public Group(String name, String description) {
+//        this.name = name;
+//        this.description = description;
+//        if (name == null) {
+//            this.name = "Unknown";
+//        }
+//        if (description == null) {
+//            this.description = "Unknown";
+//        }
+//    }
 
     /**
      * Adds article to arraylist

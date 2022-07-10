@@ -7,11 +7,13 @@ import javax.swing.*;
 
 public class DepartmentName {
     String name;
-/**
- * Назва department
- * @param name
- * @throws InvalidDepartmentNameException
- */
+
+    /**
+     * Назва department
+     *
+     * @param name
+     * @throws InvalidDepartmentNameException
+     */
     public DepartmentName(String name) throws InvalidDepartmentNameException {
         if (name.split(" ")[0].equals("Секція")) {
             this.name = name;
@@ -23,10 +25,12 @@ public class DepartmentName {
                     name + " is not valid.");
         }
     }
-/**
- * корегує назву кафедри з урахуванням входження під час написання слова «department»
- * @param name
- */
+
+    /**
+     * корегує назву кафедри з урахуванням входження під час написання слова «department»
+     *
+     * @param name
+     */
     private void fixString(String name) {
         char[] data = name.toCharArray();
 
@@ -41,11 +45,11 @@ public class DepartmentName {
     @Override
     public String toString() {
         return "Секція{" +
-                "name='" + name + " of "+ '\'' +
+                "name='" + name + " of " + '\'' +
                 '}';
     }
 
-    
+
     public String getName() {
         return name;
     }

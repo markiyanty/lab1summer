@@ -8,21 +8,21 @@ import newq.data_saver.DataWriter;
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class UserInterface extends JFrame {
     private static final long serialVersionUID = 2768304222530285489L;
-
+    JFileChooser fileChooser;
     private JButton findArticle;
     private JButton manageArticles;
     private JButton getStatistics;
     private JButton saveToFile;
-
-    JFileChooser fileChooser;
 
     public UserInterface() throws IOException {
         super("FileChooserApp");
@@ -179,7 +179,7 @@ public class UserInterface extends JFrame {
                     artName = artName1;
                 }
 
-             {
+                {
                     // adding article
                     String g_name = JOptionPane.showInputDialog("Group:");
                     // ПЕРЕВІРКА НА ІСНУВАННЯ ГРУПИ if (groupName)
@@ -214,13 +214,14 @@ public class UserInterface extends JFrame {
                                     if (isNumber(price)) {
                                         double p = Double.parseDouble(price);
                                         Article exArt = warehouse.getArticle(artName);
-                                        Article newArt = new Article( artName, info, producer, b, p);
-                                        if(newArt.getDescription().equals(exArt.getDescription()) && newArt.getProducer().equals( exArt.getProducer()) && newArt.getName().equals(exArt.getName())){
-                                            JOptionPane.showInternalMessageDialog(null, "The article already exists!",
-                                                    "Error: existing article", JOptionPane.ERROR_MESSAGE);
-                                            return;
+                                        Article newArt = new Article(artName, info, producer, b, p);
+                                        if(exArt!=null){
+                                            if (newArt.getDescription().equals(exArt.getDescription()) && newArt.getProducer().equals(exArt.getProducer()) && newArt.getName().equals(exArt.getName())) {
+                                                JOptionPane.showInternalMessageDialog(null, "The article already exists!",
+                                                        "Error: existing article", JOptionPane.ERROR_MESSAGE);
+                                                return;
                                         }
-                                        else {
+                                        } else {
                                             warehouse.addArticle(group, artName, info, producer, b, p);
                                             table.setModel(new ModelData());
                                             JOptionPane.showInternalMessageDialog(null, "The article was added.");
@@ -377,9 +378,9 @@ public class UserInterface extends JFrame {
                 } else {
                     group_desc = JOptionPane.showInputDialog("Enter the description of group you want to add: ");
                     if (group_desc != null && !group_desc.isEmpty()) {
-                        warehouse.addGroup(groupName.getName(), group_desc);
+                        warehouse.addGroup(new Group(name, group_desc));
                     } else
-                        warehouse.addGroup(groupName.getName(), "Unknown");
+                        warehouse.addGroup(new Group(name,group_desc));
 
                     table.setModel(new ModelData());
                     tableOfGroups.setModel(new ModelGroup());
@@ -494,29 +495,29 @@ public class UserInterface extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-				ArrayList<String> groupsStatistics = new ArrayList<>() ;
-				int totalArtAmount = 0;
-				int totalGroupsValue = 0;
+                ArrayList<String> groupsStatistics = new ArrayList<>();
+                int totalArtAmount = 0;
+                int totalGroupsValue = 0;
 
-				for (int group = 0; group < warehouse.getGroups().size(); group++) {
-					int groupValue = 0;
-					int groupArtAmount = 0;
-					StringBuilder groupStat = new StringBuilder("");
-					Group g = warehouse.getGroups().get(group);
-					groupArtAmount = g.getArticles().size();
-					for (int i = 0; i < g.getArticles().size(); i++) {
-						groupValue += (int) (g.getArticles().get(i).getAmount() * g.getArticles().get(i).getPrice());
-					}
-					totalArtAmount+=groupArtAmount;
-					totalGroupsValue+=groupValue;
+                for (int group = 0; group < warehouse.getGroups().size(); group++) {
+                    int groupValue = 0;
+                    int groupArtAmount = 0;
+                    StringBuilder groupStat = new StringBuilder("");
+                    Group g = warehouse.getGroups().get(group);
+                    groupArtAmount = g.getArticles().size();
+                    for (int i = 0; i < g.getArticles().size(); i++) {
+                        groupValue += (int) (g.getArticles().get(i).getAmount() * g.getArticles().get(i).getPrice());
+                    }
+                    totalArtAmount += groupArtAmount;
+                    totalGroupsValue += groupValue;
 
 
-				}
-				String totalAmount = "\nTotal amount of articles: " + totalArtAmount;
-				String totalValue = "\nTotal value of articles: " + totalGroupsValue;
-				System.out.println(totalAmount);
-				System.out.println(totalValue);
-                JOptionPane.showInternalMessageDialog(null, "\nTotal amount of articles: " + totalArtAmount + "\nTotal value of articles: " + totalGroupsValue  );
+                }
+                String totalAmount = "\nTotal amount of articles: " + totalArtAmount;
+                String totalValue = "\nTotal value of articles: " + totalGroupsValue;
+                System.out.println(totalAmount);
+                System.out.println(totalValue);
+                JOptionPane.showInternalMessageDialog(null, "\nTotal amount of articles: " + totalArtAmount + "\nTotal value of articles: " + totalGroupsValue);
                 return;
             }
 
@@ -526,24 +527,24 @@ public class UserInterface extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-				ArrayList<String> groupsStatistics = new ArrayList<>() ;
+                ArrayList<String> groupsStatistics = new ArrayList<>();
 
                 for (int group = 0; group < warehouse.getGroups().size(); group++) {
-					int groupValue = 0;
-					int groupArtAmount = 0;
-					StringBuilder groupStat = new StringBuilder("");
+                    int groupValue = 0;
+                    int groupArtAmount = 0;
+                    StringBuilder groupStat = new StringBuilder("");
                     Group g = warehouse.getGroups().get(group);
-					groupArtAmount = g.getArticles().size();
+                    groupArtAmount = g.getArticles().size();
                     for (int i = 0; i < g.getArticles().size(); i++) {
                         groupValue += (int) (g.getArticles().get(i).getAmount() * g.getArticles().get(i).getPrice());
                     }
                     groupStat.append("\n").append(g.getName()).append(": amount of articles - ").append(groupArtAmount).
-							append(", total value - ").append(groupValue);
-					groupsStatistics.add(String.valueOf(groupStat));
+                            append(", total value - ").append(groupValue);
+                    groupsStatistics.add(String.valueOf(groupStat));
 
                 }
-				System.out.println(groupsStatistics.stream().toList());
-                JOptionPane.showInternalMessageDialog(null, "Statistics: " + groupsStatistics.stream().toList() );
+                System.out.println(groupsStatistics.stream().toList());
+                JOptionPane.showInternalMessageDialog(null, "Statistics: " + groupsStatistics.stream().toList());
                 return;
             }
 
@@ -593,8 +594,8 @@ public class UserInterface extends JFrame {
         f.add(deliveryArticle);
         f.add(soldArticle);
         f.add(showGeneralStatistics);
-		f.add(showStatisticsByGroups);
-f.add(searchArticle);
+        f.add(showStatisticsByGroups);
+        f.add(searchArticle);
 
         f.setVisible(true);
     }

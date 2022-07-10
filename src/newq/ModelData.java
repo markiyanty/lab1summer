@@ -8,7 +8,7 @@ class ModelData extends AbstractTableModel {
 
     String colNames[] = {"СЕКЦІЯ", "ТОВАР", "ОПИС", "ВИРОБНИК", "КІЛЬКІСТЬ", "ЦІНА"};
     Class<?> colClasses[] = {String.class, String.class, String.class, String.class, Double.class, Double.class};
- 
+
     ModelData() {
         super();
 
@@ -25,7 +25,7 @@ class ModelData extends AbstractTableModel {
     public Object getValueAt(int rowIndex, int columnIndex) {
         if (columnIndex == 0) {
             String nameA = (String) getValueAt(rowIndex, 1);
-            String nameG=Warehouse.getGroupByArticle(nameA).getName();
+            String nameG = Warehouse.getGroupByArticle(nameA).getName();
             return nameG;
         }
         if (columnIndex == 1) {
@@ -80,5 +80,9 @@ class ModelData extends AbstractTableModel {
         }
         fireTableCellUpdated(rowIndex, columnIndex);
     }
-    public void fireTableStructureChanged(){};
+
+    public void fireTableStructureChanged() {
+    }
+
+    ;
 }
