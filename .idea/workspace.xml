@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91f18607-88c2-4130-9754-a18bce9af774" name="Changes" comment="adding tow abstract classes: Department and Product">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/json_20220320.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_backup.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json-20220320.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/newq/JSONImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/newq/data_saver/DataReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/newq/data_saver/DataWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/newq/data_saver/JSONData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2Summer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2Summer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/newq/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/newq/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/newq/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Tester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/newq/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/newq/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newq/Warehouse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,22 +32,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/User/Desktop/lab2summer",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/lab2summer&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -104,7 +91,8 @@
       <option name="presentableId" value="Default" />
       <updated>1657265323810</updated>
       <workItem from="1657265325256" duration="26735000" />
-      <workItem from="1657371069619" duration="7637000" />
+      <workItem from="1657371069619" duration="8626000" />
+      <workItem from="1657444749039" duration="304000" />
     </task>
     <task id="LOCAL-00001" summary="Create repository">
       <created>1657265782920</created>
